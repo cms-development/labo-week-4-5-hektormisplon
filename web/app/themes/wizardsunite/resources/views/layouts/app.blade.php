@@ -6,12 +6,20 @@
     @include('partials.header')
     <div class="main-wrapper" role="document">
       <div class="container">
-          @yield('content')
-        @if (App\display_sidebar())
-          <aside class="sidebar">
-            @include('partials.sidebar')
-          </aside>
-        @endif
+        <div class="row">
+            <div class="col-12 col-md-9">
+                @yield('content')
+                <h2>Content</h2> 
+                <p>
+                    Hier komt de fanlijst
+                </p>
+            </div>
+            @if (App\display_sidebar())
+              <aside class="sidebar">
+                @include('partials.sidebar')
+              </aside>
+            @endif
+          </div>
       </div>
     </div>
     @php do_action('get_footer') @endphp
