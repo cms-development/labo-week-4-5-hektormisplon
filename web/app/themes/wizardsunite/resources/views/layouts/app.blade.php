@@ -9,10 +9,6 @@
         <div class="row">
             <div class="col-12 col-md-9">
                 @yield('content')
-                <h2>Content</h2> 
-                <p>
-                    Hier komt de fanlijst
-                </p>
             </div>
             @if (App\display_sidebar())
               <aside class="sidebar">
